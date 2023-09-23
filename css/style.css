@@ -1,0 +1,137 @@
+body {
+    background-color:#150E28;
+    ;
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+
+  .flare{
+    background-image: url("/assets/Purple-Lens-Flare-PNG.png" );
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+  }
+
+  .navbar{
+    background-color: #150E28;
+  }
+
+  .nav-item>a{
+      color: #ffff;
+  }
+
+  .nav-item>a:hover{
+    color: #D434FE;
+}
+
+.globe-img{
+    position: absolute;
+    right: 10%;
+    width: 40%;
+}
+
+.boy-img{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.license{
+    color: #D434FE;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+.p-border{
+    border: 1px solid #D434FE;
+    padding: 25px;
+}
+
+.vector{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.open-lock{
+    position: absolute;
+    top: auto;
+    right: 10%;
+    margin-top: 15%;
+}
+
+.get-accordion{
+    background-color: #150E28;
+}
+
+.foot{
+    margin-top: 20rem;
+}
+
+/* forms */
+.form-bg>input{
+    background-color: #150E28;
+    color: #ffff;
+    border-radius: 0px;
+}
+
+.form-bg>textarea{
+    background-color: #150E28;
+    color: #ffff;
+    border-radius: 0px;
+}
+
+.form-control::-webkit-input-placeholder{
+    color: #ffff;
+}
+
+.form-control:valid{
+    background-color: #150E28;
+    color: #ffff;
+}
+
+.form-control:focus{
+    box-shadow: none;
+}
+
+.sel>select{
+    background-color: #150E28;
+    color: #ffff;
+    border-radius: 0px;
+}
+
+.form-select:valid{
+    background-color: #150E28;
+    color: #ffff;
+}
+
+.form-check>input{
+    background-color: #150E28;
+    color: #ffff;
+    border-radius: 0px;
+}
+
+/* button */
+
+button.btn{
+    border-radius: 1px;
+    background-image: linear-gradient(to right, #903AFF , #FE34B9);
+    border: 0px;
+    color: #ffff;
+}
+
+.bstoast{
+    background: #17c236;
+}
+
+.modal-body, .modal-footer{
+    background-color: #150E28;
+    color: #ffff;
+    border: 0px;
+}
+
+
+
