@@ -30,7 +30,7 @@ body {
 
   .flare1{
     background-image: url("../assets/Purple-Lens-Flare1-PNG.png" );
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     padding: 0px;
   }
 
