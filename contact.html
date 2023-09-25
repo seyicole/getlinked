@@ -105,7 +105,7 @@
            <footer class="py-5">
             <div class="row foot">
                 <div class="col-sm-5">
-                    <img src="/assets/getlinked.png" alt="" class="img-fluid">
+                    <img src="./assets/getlinked.png" alt="" class="img-fluid">
                     <p class="mb-3">
                         Getlinked Tech Hackathon is a technology innovation program established by a group of organizations with the aim of showcasing young and talented individuals in the field of technology
                     </p>
@@ -204,7 +204,7 @@
         body: JSON.stringify(formData), // Serialize the form data
     })
     .then(function(response) {
-        if (response.status === 200) {
+        if (response.status === 201) {
             // Show the success toast if the response status is 200.
             var successToast = document.getElementById('successToast');
             var toast = new bootstrap.Toast(successToast);
