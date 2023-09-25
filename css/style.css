@@ -1,15 +1,37 @@
 body {
     background-color:#150E28;
-    ;
+    /* background-image: url("/assets/Purple-Lens-Flare-PNG.png" );
+    background-repeat: no-repeat; */
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
     color: #f5f6f7;
   }
 
-  .flare{
+  /* .flare{
     background-image: url("/assets/Purple-Lens-Flare-PNG.png" );
     background-repeat: no-repeat;
-    /* background-size: cover; */
+  } */
+
+  .star{
+    background-image: url("/assets/star\ pu.png" );
+    background-repeat: no-repeat;
+  }
+
+  .bg-purple{
+    background-color: #150E28;
+    padding: 0px;
+  }
+
+  /* .star1{
+    background-image: url("/assets/star1.png" );
+    background-repeat: no-repeat;
+   
+  } */
+
+  .flare1{
+    background-image: url("/assets/Purple-Lens-Flare1-PNG.png" );
+    /* background-repeat: no-repeat; */
+    padding: 0px;
   }
 
   .navbar{
