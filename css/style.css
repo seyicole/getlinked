@@ -13,7 +13,7 @@ body {
   } */
 
   .star{
-    background-image: url("./assets/star\ pu.png" );
+    background-image: url("../assets/star\ pu.png" );
     background-repeat: no-repeat;
   }
 
@@ -29,7 +29,7 @@ body {
   } */
 
   .flare1{
-    background-image: url("./assets/Purple-Lens-Flare1-PNG.png" );
+    background-image: url("../assets/Purple-Lens-Flare1-PNG.png" );
     background-repeat: no-repeat;
     padding: 0px;
   }
