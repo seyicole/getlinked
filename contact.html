@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="./assets/getlinked.png" alt="" class="img-fluid"></a>
+          <a class="navbar-brand" href="index.html"><img src="./assets/getlinked.png" alt="" class="img-fluid"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,10 +28,10 @@
               </li>
              
               <li class="nav-item me-lg-5">
-                <a class="nav-link" href="/contact.html" >Contact</a>
+                <a class="nav-link" href="contact.html" >Contact</a>
               </li>
             </ul>
-              <button class="btn btn-outline-success ms-lg-5" type="submit"><a>Register</a></button>
+              <button class="btn btn-outline-success ms-lg-5" type="submit"><a href="register.html">Register</a></button>
           </div>
         </div>
       </nav>
@@ -80,14 +80,14 @@
                         <div class="col-sm-6 offset-lg-4  text-white">
                             <form id="myForm">
                                 <div class="form-bg mb-5 mt-3 text-white">
-                                  <input type="text" class="form-control" id="name" placeholder="First Name" value="" name="name">
+                                  <input type="text" class="form-control" id="name" placeholder="First Name" name="first_name">
                                 </div>
                                 <div class="form-bg mb-5 text-white">
-                                  <input type="email" class="form-control" id="email" placeholder="Email" value="" name="email">
+                                  <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                                 </div>
                                 
                                 <div class="form-bg mb-5 text-white">
-                                    <textarea class="form-control" rows="5" id="comment" value="" name="text"></textarea>
+                                    <textarea class="form-control" rows="5" id="comment" name="message"></textarea>
                                   </div>
                                 <div class="div d-flex justify-content-center">
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -166,67 +166,9 @@
         <!-- end footer -->
         </div>
 </body>
-<script >    
-    // const thisForm = document.getElementById('myForm');
-    //     thisForm.addEventListener('submit', function (e) {
-    //     e.preventDefault();
-
-    //     const formData = new FormData(this)
-    //         fetch('https://reqres.in/api/users', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             },
-    //             body: JSON.stringify(formData)
-    //         }).then(res =>{
-    //             if (!res.ok){
-    //                 alert('problem');
-    //                 return
-    //             }
-    //             return res.json()
-    //         }).then(data =>{
-    //            alert('success')
-    //            console.log(data)
-    //         }).catch(error => {
-    //             console.log(error)
-    //         });
-    // })
-    document.getElementById('myForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent the form from submitting via default behavior.
-
-    const formData = new FormData(this);
-    // Send an AJAX request to your server.
-    fetch('https://backend.getlinked.ai/hackathon/contact-form', {
-        method: 'POST',
-        headers: {
-                    'Content-Type': 'application/json'
-                },
-        body: JSON.stringify(formData), // Serialize the form data
-    })
-    .then(function(response) {
-        if (response.status === 201) {
-            // Show the success toast if the response status is 200.
-            var successToast = document.getElementById('successToast');
-            var toast = new bootstrap.Toast(successToast);
-            toast.show();
-        } else {
-            // Show the error alert if the response status is not 200.
-            var errorAlert = document.getElementById('errorAlert');
-            errorAlert.style.display = 'block';
-        }
-    })
-    .catch(function(error) {
-        console.error('Error:', error);
-        // Show the error alert for network errors or other issues.
-        var errorAlert = document.getElementById('errorAlert');
-        errorAlert.style.display = 'block';
-    });
-})
-    // Close the error alert when the user clicks the close button.
-document.querySelector('#errorAlert .close').addEventListener('click', function () {
-    var errorAlert = document.getElementById('errorAlert');
-    errorAlert.style.display = 'none';
-});
+<script src="./js/contact.js" >    
+   
+  
 
 </script>
 </html>

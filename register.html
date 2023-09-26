@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="./assets/getlinked.png" alt="" class="img-fluid"></a>
+          <a class="navbar-brand" href="indx.html"><img src="./assets/getlinked.png" alt="" class="img-fluid"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,10 +28,10 @@
               </li>
              
               <li class="nav-item me-lg-5">
-                <a class="nav-link" href="/contact.html" >Contact</a>
+                <a class="nav-link" href="contact.html" >Contact</a>
               </li>
             </ul>
-              <button class="btn btn-outline-success ms-lg-5" type="submit"><a href="/register.html">Register</a></button>
+              <button class="btn btn-outline-success ms-lg-5" type="submit"><a href="register.html">Register</a></button>
           </div>
         </div>
       </nav>
@@ -70,41 +70,41 @@
                             
                         </div>
                         <div class="col-sm-6 text-white">
-                            <form id="myForm">
+                            <form id="myReg">
                                 <div class="row">
                                   <div class="col-lg form-bg">
                                     <label for="email" class=" form-label">Team's Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter name of group" value="" name="text">
-                                  </div>
+                                    <input type="text" class="form-control" placeholder="Enter name of group" name="team_name">
+                                  </div>    
                                   <div class="col-lg form-bg">
                                     <label for="email" class="form-label">Phone</label>
-                                    <input type="number" class="form-control" placeholder="Enter your phone number" value="" name="number">
+                                    <input type="number" class="form-control" placeholder="Enter your phone number" name="phone_number">
                                   </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg form-bg">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" placeholder="Enter email" value="" name="text">
+                                        <input type="email" class="form-control" placeholder="Enter email" name="email">
                                       </div>
                                       <div class="col-lg form-bg">
                                         <label for="email" class="form-label">Project topic</label>
-                                        <input type="text" class="form-control" placeholder="Enter project topic" value="" name="number">
+                                        <input type="text" class="form-control" placeholder="Enter project topic" name="project_topic">
                                       </div>
                                 </div>
 
                                 <div class="row">
                                     <div class="col sel">
-                                        <label for="text" class="form-label">Category</label>
-                                        <select id="selector1" class="form-select" value="">
-                                            <option>Tech</option>
-                                            <option>Marketing</option>
-                                            <option>Agriculture</option>
-                                            <option>Healthcare</option>
+                                        <label for="category" class="form-label">Category</label>
+                                        <select id="selector1" type="numbers" class="form-select" name="category">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
                                           </select>
                                       </div>
                                       <div class="col sel">
                                         <label for="number" class="form-label">Group Size</label>
-                                        <select id="selector" class="form-select" value="">
+                                        <select id="selector" class="form-select" name="group_size">
                                             <option>10</option>
                                             <option>50</option>
                                             <option>100</option>
@@ -116,7 +116,7 @@
                                       </div>
                                       <div class="check">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="checkbox" name="option1" value="" required>
+                                            <input class="form-check-input" type="checkbox" id="checkbox" name="option1" name="privacy_policy_accepted" checked>
                                             <label class="form-check-label"><small>I agreed with the event terms and conditions  and privacy policy</small></label>
                                           </div>
                                       </div>
@@ -131,53 +131,7 @@
             </div>
         </div>
 </body>
-<script>
-    document.getElementById('myForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent the form from submitting via default behavior.
-
-    // Check if the checkbox is checked.
-    var checkbox = document.getElementById('checkbox');
-    var checkboxChecked = checkbox.checked;
-
-    // Get the selected value from the selector field.
-    var selector = document.getElementById('selector');
-    var selectedValue = selector.value;
-
-    var selector1 = document.getElementById('selector1');
-    var selectedValue1 = selector1.value;
-
-    const formData = new FormData(this);
-    // Send an AJAX request to your server.
-    fetch('https://backend.getlinked.ai/hackathon/registration', {
-        method: 'POST',
-        headers: {
-                    'Content-Type': 'application/json'
-                },
-        body: JSON.stringify(formData), // Serialize the form data
-    })
-    .then(function(response) {
-        if (response.status === 201) {
-            // Show the success modal if the response status is 200.
-            var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-            successModal.show();
-        } else {
-            // Show the error alert if the response status is not 200.
-            var errorAlert = document.getElementById('errorAlert');
-            errorAlert.style.display = 'block';
-        }
-    })
-    .catch(function(error) {
-        console.error('Error:', error);
-        // Show the error alert for network errors or other issues.
-        var errorAlert = document.getElementById('errorAlert');
-        errorAlert.style.display = 'block';
-    });
-});
-
-// Close the error alert when the user clicks the close button.
-document.querySelector('#errorAlert', '.close').addEventListener('click', function () {
-    var errorAlert = document.getElementById('errorAlert');
-    errorAlert.style.display = 'none';
-});
+<script src="./js/register.js">
+   
 </script>
 </html>
