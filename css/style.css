@@ -1,10 +1,15 @@
 body {
     background-color:#150E28;
-    /* background-image: url("/assets/Purple-Lens-Flare-PNG.png" );
-    background-repeat: no-repeat; */
     font: 20px Montserrat, sans-serif;
     line-height: 1.8;
     color: #f5f6f7;
+  }
+
+  h6{
+      font-size: .8750em;
+  }
+  .small{
+      font-size: 0.75em;
   }
 
   /* .flare{
@@ -45,6 +50,25 @@ body {
   .nav-item>a:hover{
     color: #D434FE;
 }
+/* images */
+img.idea{
+    width: 80%;
+}
+
+img.rule-star{
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+img.star7{
+    position: absolute;
+    margin-top: 40%;
+}
+
+img.star-trophy{
+    margin-left: 30%;
+}
 
 .globe-img{
     position: absolute;
@@ -57,7 +81,7 @@ body {
     top: 0;
     left: 0;
 }
-
+/*  */
 .license{
     color: #D434FE;
 }
@@ -136,6 +160,12 @@ a{
     border-radius: 0px;
 }
 
+.bd{
+    border: 0px solid;
+    background: #ffffff08;
+    padding: 70px;
+}
+
 /* button */
 
 button.btn{
@@ -154,6 +184,74 @@ button.btn{
     color: #ffff;
     border: 0px;
 }
+
+.pink{
+    color: #ff26b9;
+}
+
+.purple{
+    color: #D434FE;
+}
+
+/* Media queries */
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (min-width: 600px) {
+    .arrow {
+      margin-top: 70%;
+      /* margin-left: 5px; */
+    }
+
+    .sm1{
+        display: none;
+    }
+
+    /* .lg1{
+        display: ;
+    } */
+  }
+
+  @media screen and (max-width: 600px) {
+    p {
+      text-align: center;
+    }
+
+    .r-and-g{
+        flex-direction: column-reverse;
+    }
+
+    .globe-img {
+        position: absolute;
+        right: 10%;
+        width: 80%;
+    }
+    .lg{
+        display: none;
+    }
+
+    .sm{
+        display: block;
+    }
+    button.btn{
+        margin: auto;
+    }
+
+    .ignite{
+        font-size: calc(1.0rem + .1vw);
+    }
+    .dash{
+        max-width: 40%;
+    }
+    .t{
+        text-align: left;
+    }
+
+    .d-center{
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+  }
 
 
 
