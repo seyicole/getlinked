@@ -8,6 +8,11 @@ body {
   h6{
       font-size: .8750em;
   }
+
+  p{
+      font-size: 1rem;
+  }
+
   .small{
       font-size: 0.75em;
   }
@@ -160,11 +165,7 @@ a{
     border-radius: 0px;
 }
 
-.bd{
-    border: 0px solid;
-    background: #ffffff08;
-    padding: 10px;
-}
+
 
 /* button */
 
@@ -206,13 +207,20 @@ button.btn{
         display: none;
     }
 
-    /* .lg1{
-        display: ;
-    } */
+    .bd{
+        border: 0px solid;
+        background: #ffffff08;
+        padding: 30px;
+    }
   }
 
   @media screen and (max-width: 600px) {
+    .ctc{
+        display: none;
+    }
+
     p {
+      font-size: 0.92rem;
       text-align: center;
     }
 
@@ -250,6 +258,16 @@ button.btn{
         display: flex;
         justify-content: center;
         margin: auto;
+    }
+
+    .social{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-row{
+        flex-direction: column-reverse;
     }
   }
 
